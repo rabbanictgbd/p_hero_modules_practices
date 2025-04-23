@@ -7,5 +7,11 @@ const products = [
     {name: "mobile", brand: "apple", price: 50000, color: "black"},
 ]
 
-const productBrand = products.map(product => product.brand)
+const productBrand = products.map(product => product.brand=="apple")
 console.log(productBrand)
+const productBrand2 = products.filter(product=> product.brand=="apple")
+console.log(productBrand2)
+// const productBrand2 = products.filter(product=> product.brand="apple")
+// console.log(productBrand2)
+const productPrice = products.filter(product=> product.price>=7000)
+console.log(productPrice)
