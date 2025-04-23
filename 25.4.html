@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tour</title>
+    <link rel="stylesheet" href="25.1.css">
+    <style>
+        li{
+            color: green;
+        }
+        .important-place{
+            color: blue;
+        }
+        #fruits{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <h1>Welcome to Document Object Model DOM</h1>
+        <ul>
+            <li>Document</li>
+            <li>Object</li>
+            <li>Model</li>
+        </ul>
+
+    </section>
+
+    <section>
+        <h1 >My favorite places</h1>
+        <ul class="place">
+            <li class="important-place">Bandorban</li>
+            <li class="important-place">Bandorban</li>
+            <li class="important-place">Shundorban</li>
+            <li class="important-place">Bandorban</li>
+            <li>Katabon</li>
+            <li>Lama</li>
+            <li>hama</li>
+            <li>kama</li>
+        </ul>
+    </section>
+
+    <section>
+        <h1 id="fruits"> Favorite Fruits</h1>
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Banana</li>
+            <li>Mango</li>
+            <li>Malta</li>
+        </ul>
+    </section>
+
+        <script src="25.1.js"></script>
+        <script>
+          
+            const liCollection= document.getElementsByTagName('li');
+            for(const li of liCollection){
+               
+                // question can't see at inspection console
+            }
+            const h1Collection= document.getElementsByTagName("h1")
+            for(const h1 of h1Collection){
+                
+            }
+
+            console.log(document.getElementById("fruits"))
+            console.log(document.getElementById("fruits").innerText)
+            console.log(document.getElementsByClassName("important-place"))
+            console.log(document.getElementsByClassName("important-place")[0])
+            console.log(document.getElementsByTagName("h1"))
+            console.log(document.getElementsByTagName("h1")[0])
+            console.log(document.querySelector("#fruits"))
+            console.log(document.querySelector("#fruits").innerText)
+            console.log(document.querySelector(".important-place"))
+            console.log(document.querySelectorAll(".important-place"))
+            console.log(document.querySelectorAll(".place li"))
+           
+        </script>
+</body>
+</html>

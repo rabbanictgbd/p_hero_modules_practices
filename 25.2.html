@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tour</title>
+    <link rel="stylesheet" href="25.1.css">
+    <style>
+        li{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Document Object Model DOM</h1>
+        <ul>
+            <li>Object</li>
+            <li>Object</li>
+            <li>Model</li>
+            <li>Document</li>
+        </ul>
+
+        <script src="25.1.js"></script>
+        <script>
+            console.log("From inside javaScript")
+            const liCollection= document.getElementsByTagName('li');
+            for(const li of liCollection){
+                console.log(liCollection)
+                console.log(li.innerText);
+                // question can't see at inspection console
+            }
+            const h1Collection= document.getElementsByTagName("h1")
+            for(const h1 of h1Collection){
+                console.log(h1);
+                console.log(h1.innerText);
+            }
+        </script>
+</body>
+</html>

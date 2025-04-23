@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment box</title>
+    <style>
+        .comment {
+            border: 2px solid blue;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div id="comment-section">
+                <h1>This is the page</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ad architecto similique voluptas
+                    delectus in dignissimos, quidem, alias aperiam maxime hic. Earum nobis fugiat minus vel id ullam
+                    rerum cumque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ad velit, similique
+                    quidem quisquam accusantium quod eligendi, dicta error minima, consequuntur eum iste sapiente cumque
+                    recusandae sed ea. Commodi, exercitationem.</p>
+                <h3>Comment section</h3>
+                <!-- question p*3#comment-$.comment{lorem10} lorem50 is not working solved ">" for p -->
+
+                <p id="comment-1" class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque odit
+                    ad libero nobis, officia commodi quibusdam qui architecto in? Aspernatur cupiditate culpa quae quis
+                    cum laborum dolor omnis esse eius.</p>
+                <p id="comment-2" class="comment">Aspernatur fugiat temporibus enim esse recusandae reiciendis sit iste.
+                    Tenetur ipsum quidem temporibus sequi nostrum soluta ipsam, ex voluptatem quos ipsa expedita aliquam
+                    non illo eius, quam tempore possimus nulla.</p>
+                <p id="comment-3" class="comment">Minima iusto eos tempora ad eum, itaque beatae totam. Illum optio nisi
+                    sed fugit eius soluta libero quidem eligendi ex mollitia vero eum sequi quas maxime, hic at
+                    possimus? Explicabo.</p>
+
+                
+
+            </div>
+                <textarea name="" id="text-box" cols="180" rows="5"></textarea>
+                <button id="text-btn">add comment</button>
+        </section>
+    </main>
+    <script>
+        document.getElementById("text-btn").addEventListener("click", function () {
+            const textBox = document.getElementById("text-box");
+            const textValue = textBox.value;
+            const commentSection = document.getElementById("comment-section");
+            const commentTag = document.createElement("p");
+            commentTag.classList.add("comment");
+            commentTag.innerText= textValue;
+            commentSection.appendChild(commentTag);
+            // question clean is not working..........
+            textBox.innerText = ' ';
+            
+        })
+    </script>
+</body>
+
+</html>

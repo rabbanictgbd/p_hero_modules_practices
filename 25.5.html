@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tour</title>
+    <link rel="stylesheet" href="25.1.css">
+    <style>
+        li{
+            color: green;
+        }
+        .important-place{
+            color: blue;
+        }
+        #fruits{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <h1>Welcome to Document Object Model DOM</h1>
+        <ul>
+            <li>Document</li>
+            <li>Object</li>
+            <li>Model</li>
+        </ul>
+
+    </section>
+
+    <section>
+        <h1 >My favorite places</h1>
+        <ul class="place">
+            <li class="important-place">Bandorban</li>
+            <li class="important-place">Bandorban</li>
+            <li class="important-place">Shundorban</li>
+            <li class="important-place">Bandorban</li>
+            <li>Katabon</li>
+            <li>Lama</li>
+            <li>hama</li>
+            <li>kama</li>
+        </ul>
+    </section>
+
+    <section>
+        <h1 id="fruits" class="test add first second third"> Favorite Fruits</h1>
+        <ul>
+            <li class="high-price">Apple</li>
+            <li class="high-price">Orange</li>
+            <li>Banana</li>
+            <li>Mango</li>
+            <li>Malta</li>
+        </ul>
+    </section>
+
+    <section id="new" class="new-container">
+        <h1 >New section</h1>
+        <ul>
+            <li id="l1" class="list">list1</li>
+            <li id="l2" class="list">list2</li>
+            <li id="l3" class="list">list3</li>
+            <li>list4</li>
+           
+        </ul>
+    </section>
+
+        <script src="25.1.js"></script>
+        <script>
+          
+            const liCollection= document.getElementsByTagName('li');
+            for(const li of liCollection){
+               
+                // question can't see at inspection console
+            }
+            const h1Collection= document.getElementsByTagName("h1")
+            for(const h1 of h1Collection){
+                
+            }
+
+            console.log(document.getElementById("fruits"))
+            console.log(document.getElementById("fruits").innerText)
+            console.log(document.getElementsByClassName("important-place"))
+            console.log(document.getElementsByClassName("important-place")[0])
+            console.log(document.getElementsByTagName("h1"))
+            console.log(document.getElementsByTagName("h1")[0])
+            console.log(document.querySelector("#fruits"))
+            console.log(document.querySelector("#fruits").innerText)
+            console.log(document.querySelector(".important-place"))
+            console.log(document.querySelectorAll(".important-place"))
+            console.log(document.querySelectorAll(".place li"))
+            document.getElementById("fruits").style.textAlign= "center"
+            document.getElementById("fruits").style.color= "green"
+            // 
+            //question not showing ............solved console
+           const title= document.getElementById("fruits")
+           title.getAttribute('class')
+           title.classList
+           title.classList.add("fifth")
+           
+
+            // question class not working ..........solved by index
+             document.getElementsByClassName("important-place")[0].style.color= "red"
+
+             title.setAttribute('title', 'this is the fruits head')
+
+             console.log(document.getElementsByClassName('new-container')[0].innerHTML)
+             console.log(document.getElementsByClassName('new-container')[0].innerText)
+             
+             document.getElementsByClassName('new-container')[0].innerHTML= '<h3>Changing new to edit by DOM'
+             
+           
+        </script>
+</body>
+</html>
