@@ -13,9 +13,26 @@ const tValue6=[]
 const tValue7="123"
 
 if(fValue1){
-    return("the value is truthy")
+    console.log("the value is truthy")
 }else{
-    return("the value is falsy")
+    console.log("the value is falsy")
 };
 
 console.log(fValue1)
+console.log(tValue)
+
+fValue1?console.log("value is "+true):console.log("value is "+false)
+fValue2?console.log("value is "+true):console.log("value is "+false)
+fValue3?console.log("value is "+true):console.log("value is "+false)
+fValue4?console.log("value is "+true):console.log("value is "+false)
+
+tValue?console.log("value is "+true):console.log("value is "+false)
+tValue2?console.log("value is "+true):console.log("value is "+false)
+tValue3?console.log("value is "+true):console.log("value is "+false)
+tValue4?console.log("value is "+true):console.log("value is "+false)
+tValue5?console.log("value is "+true):console.log("value is "+false)
+tValue6?console.log("value is "+true):console.log("value is "+false)
+tValue7?console.log("value is "+true):console.log("value is "+false)
+
+
+console.log(fValue2)
