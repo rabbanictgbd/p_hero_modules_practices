@@ -35,4 +35,21 @@ tValue6?console.log("value is "+true):console.log("value is "+false)
 tValue7?console.log("value is "+true):console.log("value is "+false)
 
 
-console.log(fValue2)
+const min=10
+const max=50
+
+min>=10 && max<=40?console.log("truthy"):console.log("falsy")
+min>=10 || max<=40?console.log("truthy"):console.log("falsy")
+
+const result = min>10 && min<50? "true con": "false con"
+console.log(result)
+
+const isActive=true
+isActive?console.log("show user green"): console.log("hide user")
+
+const showUser= ()=>console.log("show green user")
+const hideUser= ()=>console.log("show red user")
+
+isActive?showUser():hideUser()
+isActive && showUser()
+isActive || hideUser()
