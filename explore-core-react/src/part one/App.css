@@ -41,9 +41,13 @@
   color: #888;
 }
 
-.box{
+.border{
+  border-radius: 15px;
+  border: solid;
+}
+
+.person{
+  border: tomato solid;
   margin: 3px;
   padding: 2px;
-  border: solid 1px gray;
-  border-radius: 10px;
 }
