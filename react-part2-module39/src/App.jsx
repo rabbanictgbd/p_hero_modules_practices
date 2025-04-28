@@ -1,12 +1,21 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './Counter'
 import Score from './Score'
 import Users from './Users'
+import Friends from './Friends'
+const fetchFriends= async()=>{
+  const res=await fetch("https://jsonplaceholder.typicode.com/users")
+  return res.json();
+}
 
 function App() {
+  
+  const friendsPromise= fetchFriends();
+  const fetchUsers=fetch('https://jsonplaceholder.typicode.com/users')
+  .then(res => res.json())
 
 function eventhandler(){
   alert("I am clicked") 
@@ -17,9 +26,14 @@ const handleAdd5=(add)=>{
 }
   return (
     <>
-     
       <h3>Vite + React</h3>
-      <Users></Users>
+      <Suspense fallback={<h3>Friends are coming for treat...</h3>} >
+        <Friends friendsPromise={friendsPromise}></Friends>
+      </Suspense>
+<Suspense fallback ={<h3>Loading...</h3>}>
+  <Users fetchUsers={fetchUsers}></Users>
+</Suspense>
+      
       <Counter></Counter>
       <Score></Score>
       <button onClick={eventhandler}>click me</button>
