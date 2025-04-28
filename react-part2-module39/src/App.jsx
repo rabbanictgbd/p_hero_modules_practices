@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Counter from './Counter'
 
 function App() {
 
@@ -16,6 +17,7 @@ const handleAdd5=(add)=>{
     <>
      
       <h3>Vite + React</h3>
+      <Counter></Counter>
       <button onClick={eventhandler}>click me</button>
       <button onClick={function eventhandler2(){ alert("I'm clicked 2")}}>click me2</button>
       <button onClick={()=>{ alert("I'm clicked 3")}}>click me3</button>
