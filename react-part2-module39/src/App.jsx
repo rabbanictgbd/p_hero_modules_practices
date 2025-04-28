@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './Counter'
 import Score from './Score'
+import Users from './Users'
 
 function App() {
 
@@ -18,6 +19,7 @@ const handleAdd5=(add)=>{
     <>
      
       <h3>Vite + React</h3>
+      <Users></Users>
       <Counter></Counter>
       <Score></Score>
       <button onClick={eventhandler}>click me</button>
