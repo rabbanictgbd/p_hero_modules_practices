@@ -6,13 +6,20 @@ import Counter from './Counter'
 import Score from './Score'
 import Users from './Users'
 import Friends from './Friends'
+import Posts from './Posts'
 const fetchFriends= async()=>{
   const res=await fetch("https://jsonplaceholder.typicode.com/users")
   return res.json();
 }
 
+
 function App() {
+  const fetchPosts= async()=>{
+    const res= await fetch("https://jsonplaceholder.typicode.com/posts")
+   return res.json();
+  }
   
+  const postsPromise= fetchPosts();
   const friendsPromise= fetchFriends();
   const fetchUsers=fetch('https://jsonplaceholder.typicode.com/users')
   .then(res => res.json())
@@ -27,6 +34,9 @@ const handleAdd5=(add)=>{
   return (
     <>
       <h3>Vite + React</h3>
+      <Suspense fallback={<h3>Posts ate coming...</h3>}>
+        <Posts postsPromise={postsPromise}></Posts>
+      </Suspense>
       <Suspense fallback={<h3>Friends are coming for treat...</h3>} >
         <Friends friendsPromise={friendsPromise}></Friends>
       </Suspense>
