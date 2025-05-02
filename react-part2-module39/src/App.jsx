@@ -8,6 +8,7 @@ import Users from './Users'
 import Friends from './Friends'
 import Posts from './Posts'
 import Count from './Task39Count'
+import Toggle from './Task39Toggle'
 const fetchFriends= async()=>{
   const res=await fetch("https://jsonplaceholder.typicode.com/users")
   return res.json();
@@ -35,6 +36,7 @@ const handleAdd5=(add)=>{
   return (
     <>
       <h3>Vite + React</h3>
+      <Toggle></Toggle>
       <Count></Count>
       <Suspense fallback={<h3>Posts ate coming...</h3>}>
         <Posts postsPromise={postsPromise}></Posts>
